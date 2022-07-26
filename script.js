@@ -1,4 +1,5 @@
 // search by ingredient fetch
+//todo clear results before displaying again because I'm getting an error
 
 // to do: .push? to create a list of the drinks in display not just the last one
 var apiKey = keys.API_KEY;
