@@ -41,7 +41,14 @@ function ingredientSearch() {
       //     // const drinks = data.drinks[index];
       //     }
 
-      $("#recipe-display").text("Ingredient search result: " + data.drinks[0]["strDrink"]);
+      $("#recipe-display").text(
+        "Ingredient search result: " +
+          data.drinks[0]["strDrink"] +
+          " " +
+          data.drinks[0]["strDrinkThumb"] +
+          " " +
+          data.drinks[0]["strInstructions"]
+      );
     });
 }
 
@@ -64,7 +71,14 @@ function nameSearch() {
       //     // const drinks = data.drinks[index];
       //     }
 
-      $("#recipe-display").text("Cocktail search result: " + data.drinks[0]["strDrink"]);
+      $("#recipe-display").text(
+        "Ingredient search result: " +
+          data.drinks[0]["strDrink"] +
+          " " +
+          data.drinks[0]["strDrinkThumb"] +
+          " " +
+          data.drinks[0]["strInstructions"]
+      );
     });
 }
 $(".ingredient-search").on("click", handleSearchFormSubmit);
