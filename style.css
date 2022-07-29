@@ -1,0 +1,15 @@
+h1{
+    text-align: center;
+}
+
+.main{
+    border: solid black 2px;
+}
+
+p{
+    text-align: center;
+}
+
+.recipes{
+    border-bottom: solid gray 2px;
+}

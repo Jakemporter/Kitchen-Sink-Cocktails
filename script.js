@@ -42,6 +42,7 @@ function ingredientSearch() {
             for (let i = 0; i < data.drinks.length; i++) {
                 if (data.drinks != "None Found") {
                     $('#recipe-display').append(data.drinks[i]['strDrink'] + ' ' + data.drinks[i]['strDrinkThumb']);
+                    $('#recipe-display').addClass('recipes')
                 }
 
                 else {
