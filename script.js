@@ -1,3 +1,5 @@
+// to do add button to ingredient result
+
 // search by ingredient fetch
 var apiKey = keys.API_KEY;
 
@@ -41,8 +43,27 @@ function ingredientSearch() {
             // for loop to create list of results
             for (let i = 0; i < data.drinks.length; i++) {
                 if (data.drinks != "None Found") {
-                    $('#recipe-display').append(data.drinks[i]['strDrink'] + ' ' + data.drinks[i]['strDrinkThumb']);
-                    $('#recipe-display').addClass('recipes')
+                    $('#recipe-display').append(`
+                    <div class="columns">
+                    <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-128x128">
+                        <img src="${data.drinks[i]["strDrinkThumb"]}" alt="Cocktail Thumbnail">
+                      </figure>
+                    </div>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-4">${data.drinks[i]["strDrink"]}</p>
+                          
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  </div>`
+                  );
                 }
 
                 else {
@@ -76,14 +97,31 @@ function nameSearch() {
             if (data.drinks != null) {
                 for (let i = 0; i < data.drinks.length; i++) {
 
-                    $('#recipe-display').append(`<div class="card" style="width: 18rem;">
-                    <img src="${data.drinks[i]['strDrinkThumb']}" class="card-img-top" alt="...">
-                    <div class="card-body">
-                      <h5 class="card-title">${data.drinks[i]['strDrink']}</h5>
-                      <p class="card-text">${data.drinks[i]["strInstructions"]}</p>
-                  
+                    $('#recipe-display').append(`
+                    <div class="columns">
+                    <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                    <div class="card-image">
+                      <figure class="image is-128x128">
+                        <img src="${data.drinks[i]["strDrinkThumb"]}" alt="Cocktail Thumbnail">
+                      </figure>
                     </div>
-                  </div>`);
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p class="title is-4">${data.drinks[i]["strDrink"]}</p>
+                          
+                        </div>
+                      </div>
+                  
+                      <div class="content">
+                        ${data.drinks[i]["strInstructions"]}
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  </div>`
+                  );
                 }
             }
 

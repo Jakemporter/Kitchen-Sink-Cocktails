@@ -16,5 +16,8 @@ p{
 } */
 
 .recipe-display{
-    display: flex;
+    /* display: flex; */
+    padding: 1em;
+    width: 100vw;
 }
+
