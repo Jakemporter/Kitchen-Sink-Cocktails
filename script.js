@@ -76,7 +76,14 @@ function nameSearch() {
             if (data.drinks != null) {
                 for (let i = 0; i < data.drinks.length; i++) {
 
-                    $('#recipe-display').append(data.drinks[i]['strDrink'] + ' ' + data.drinks[i]['strDrinkThumb'] + ' ' + data.drinks[i]["strInstructions"]);
+                    $('#recipe-display').append(`<div class="card" style="width: 18rem;">
+                    <img src="${data.drinks[i]['strDrinkThumb']}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">${data.drinks[i]['strDrink']}</h5>
+                      <p class="card-text">${data.drinks[i]["strInstructions"]}</p>
+                  
+                    </div>
+                  </div>`);
                 }
             }
 

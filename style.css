@@ -10,6 +10,11 @@ p{
     text-align: center;
 }
 
-.recipes{
+/* .recipes{
     border-bottom: solid gray 2px;
+    color: red;
+} */
+
+.recipe-display{
+    display: flex;
 }
