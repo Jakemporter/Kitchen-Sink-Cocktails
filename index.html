@@ -10,22 +10,29 @@
 </head>
 <body>
     <!-- <img src="./ksc.webp" alt=""> -->
-    <h1>Kitchen Sink Cocktails</h1>
+    <h1 class="title1">Kitchen Sink Cocktails</h1>
+    <div class="all">
     <div class="main" id="main">
         <!-- search by ingredient -->
-        <p>Create a cocktail from anything you have in your kitchen...</p>
-        <label for="ingredient-search">Search by ingredients</label>
-        <input type="search" id="ingredient-input">
+        <div class="background-image1">
+        <p class="bigger">Create a cocktail from anything you have in your kitchen...</p>
+        <label class="bigger" for="ingredient-search">Search by ingredients</label>
+        <input class="input1" type="search" id="ingredient-input">
         <button class="ingredient-search button is-primary" id="ingredient-search">Search</button>
         <!-- search by cocktail name -->
-        <label for="cocktail-search">Search by cocktail name</label>
-        <input type="search" id="cocktail-search">
+        <label class="bigger" for="cocktail-search">Search by cocktail name</label>
+        <input class="input1" type="search" id="cocktail-search">
         <button class="name-search button is-primary" id="name-search">Search</button>
-
+        </div>
         <!-- empty div for recipe display -->
         <div class="recipe-display" id="recipe-display">
             <ul class="list" id="list"></ul>
         </div>
+        <footer>
+            <p class="bigger">Random Fact</p>
+            <p class="quote bigger"></p>
+        </footer>
+    </div>
     </div>
 <script type="text/javascript" src="config.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

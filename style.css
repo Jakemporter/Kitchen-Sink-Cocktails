@@ -1,8 +1,7 @@
-body {
+.main {
     background-image: url(./ksc.webp);
     background-size: cover;
     font-family: sans-serif;
-    background-repeat: no-repeat;
     background-size: auto;
 }
 
@@ -28,4 +27,43 @@ p{
     padding: 1em;
     width: 100vw;
 }
-
+.bigger{
+    font-size: 1.5em;
+    color: white;
+    font-weight: bolder;
+}
+.image {
+    margin-left: auto;
+    margin-right: auto;
+}
+.columns{
+    padding-left: 15%;
+    padding-right: 15%;
+    /* background-image: url(./ksc.webp) */
+}
+.card-image {
+    background-color: #0e9594;
+    border-bottom: solid black 2px;
+}
+img{
+    box-shadow: black 3px 3px 1.5px;
+}
+.card {
+    border: solid black 2px;
+}
+.input1{
+    width: 10em;
+    height: 2em;
+    border: solid black 2px;
+}
+.title1{
+    font-size: 1.5em;
+    font-weight: bolder;
+    padding: 1 em;
+}
+.all{
+    background-image: url(./ksc.webp);
+    background-size: cover;
+    font-family: sans-serif;
+    background-size: auto;
+}
