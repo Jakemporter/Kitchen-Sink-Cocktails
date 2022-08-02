@@ -1,5 +1,24 @@
 // to do add button to ingredient result
 
+var ingredientInputVal = $("#ingredient-input").val();
+var nameInputVal = $("#cocktail-search").val();
+
+// search history
+function searchHistory() {
+  if (ingredientInputVal) {
+    localStorage.setItem("searchHistory", JSON.stringify(ingredientInputVal));
+  }
+  else if (nameInputVal) {
+    localStorage.setItem("searchHistory", JSON.stringify(nameInputVal));
+  }
+  if (localStorage.getItem("searchHistory")){
+  $('#search-history').addClass('bigger');
+  $('#search-history').text("Last search: " + localStorage.getItem("searchHistory"));
+}
+}
+
+
+
 // search by ingredient fetch
 var apiKey = keys.API_KEY;
 
@@ -22,8 +41,8 @@ function handleSearchFormSubmit(event) {
   event.preventDefault();
   $("#recipe-display").text("");
 
-  var ingredientInputVal = $("#ingredient-input").val();
-  var nameInputVal = $("#cocktail-search").val();
+  ingredientInputVal = $("#ingredient-input").val();
+  nameInputVal = $("#cocktail-search").val();
 
   if (!ingredientInputVal && !nameInputVal) {
     console.error("You need a search input value!");
@@ -36,6 +55,8 @@ function handleSearchFormSubmit(event) {
   }
 
   console.log(searchInput);
+
+  searchHistory();
 
   $("#ingredient-input").val("");
   $("#cocktail-search").val("");
@@ -139,3 +160,4 @@ $(".name-search").on("click", handleSearchFormSubmit);
 $("#name-search").on("click", nameSearch);
 
 quoteOfTheDay();
+searchHistory();
