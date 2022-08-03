@@ -64,7 +64,7 @@ function handleSearchFormSubmit(event) {
 
 function ingredientSearch() {
   var apiCall =
-    "https://cors-anywhere.herokuapp.com/www.thecocktaildb.com/api/json/v2/" + apiKey + "/filter.php?i=" + searchInput;
+    " https://rocky-reef-56857.herokuapp.com/www.thecocktaildb.com/api/json/v2/" + apiKey + "/filter.php?i=" + searchInput;
   console.log(apiCall);
   fetch(apiCall)
     .then(function (response) {
@@ -107,7 +107,7 @@ function ingredientSearch() {
 // search by name function
 function nameSearch() {
   var apiCall =
-    "https://cors-anywhere.herokuapp.com/http://www.thecocktaildb.com/api/json/v2/" +
+    " https://rocky-reef-56857.herokuapp.com/http://www.thecocktaildb.com/api/json/v2/" +
     apiKey +
     "/search.php?s=" +
     searchInput;
