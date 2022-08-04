@@ -98,7 +98,7 @@ function ingredientSearch() {
         </div>`);
         } else {
           $("#recipe-display").addClass("bigger");
-          $("#recipe-display").text("Ingredient not found. Please search a different ingredient.");
+          $("#recipe-display").text("Ingredient not found. Please search a different ingredient. Don't use spaces between ingredients");
         }
       }
     });
