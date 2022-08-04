@@ -118,7 +118,13 @@ function nameSearch() {
     })
     .then(function (data) {
       console.log(data.drinks);
-
+      
+      var first = ""
+      var second = ""
+      var third = ""
+      var fourth = ""
+      var fifth = ""
+      var sixth = ""
 
       if (data.drinks != null) {
         for (let i = 0; i < data.drinks.length; i++) {
@@ -130,22 +136,22 @@ function nameSearch() {
             measures.push(data.drinks[i][`strMeasure${i2}`])
             i2++
             if (measures[0] && ingredients[0]) {
-            var first = `${measures[0]} ${ingredients[0]}`
+            first = `${measures[0]} ${ingredients[0]}`
             }
             if (measures[1] && ingredients[1]) {
-              var second = `${measures[1]} ${ingredients[1]}`
+              second = `${measures[1]} ${ingredients[1]}`
             }
             if (measures[2] && ingredients[2]) {
-              var third = `${measures[2]} ${ingredients[2]}`
+              third = `${measures[2]} ${ingredients[2]}`
             }
             if (measures[3] && ingredients[3]) {
-              var fourth = `${measures[3]} ${ingredients[3]}`
+              fourth = `${measures[3]} ${ingredients[3]}`
             }
             if (measures[4] && ingredients[4]) {
-              var fifth = `${measures[4]} ${ingredients[4]}`
+              fifth = `${measures[4]} ${ingredients[4]}`
             }
             if (measures[5] && ingredients[5]) {
-              var sixth = `${measures[5]} ${ingredients[5]}`
+              sixth = `${measures[5]} ${ingredients[5]}`
             }
             
           }
@@ -178,6 +184,8 @@ function nameSearch() {
         ${fourth}
         <br>
         ${fifth}
+        <br>
+        ${sixth}
         <br>
         ${data.drinks[i]["strInstructions"]}
         
