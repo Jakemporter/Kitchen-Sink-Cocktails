@@ -119,8 +119,37 @@ function nameSearch() {
     .then(function (data) {
       console.log(data.drinks);
 
+
       if (data.drinks != null) {
         for (let i = 0; i < data.drinks.length; i++) {
+          var i2 = 1
+          var ingredients = [];
+          var measures = [];
+          while (data.drinks[i][`strIngredient${i2}`]) {
+            ingredients.push(data.drinks[i][`strIngredient${i2}`])
+            measures.push(data.drinks[i][`strMeasure${i2}`])
+            i2++
+            if (measures[0] && ingredients[0]) {
+            var first = `${measures[0]} ${ingredients[0]}`
+            }
+            if (measures[1] && ingredients[1]) {
+              var second = `${measures[1]} ${ingredients[1]}`
+            }
+            if (measures[2] && ingredients[2]) {
+              var third = `${measures[2]} ${ingredients[2]}`
+            }
+            if (measures[3] && ingredients[3]) {
+              var fourth = `${measures[3]} ${ingredients[3]}`
+            }
+            if (measures[4] && ingredients[4]) {
+              var fifth = `${measures[4]} ${ingredients[4]}`
+            }
+            if (measures[5] && ingredients[5]) {
+              var sixth = `${measures[5]} ${ingredients[5]}`
+            }
+            
+          }
+          console.log(ingredients);
           $("#recipe-display").append(`
         <div class="columns">
         <div class="column is-half is-offset-one-quarter">
@@ -139,7 +168,19 @@ function nameSearch() {
         </div>
         
         <div class="content">
+        
+        ${first}
+        <br>
+        ${second}
+        <br>
+        ${third}
+        <br>
+        ${fourth}
+        <br>
+        ${fifth}
+        <br>
         ${data.drinks[i]["strInstructions"]}
+        
         </div>
         </div>
         </div>
