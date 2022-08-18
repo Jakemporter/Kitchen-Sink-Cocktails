@@ -83,7 +83,6 @@ function ingredientSearch() {
           <img class="card-img-top" src="${data.drinks[i]["strDrinkThumb"]}" alt="Drink Thumbnail">
           <div class="card-body">
           <h5 class="card-title">${data.drinks[i]["strDrink"]}</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
           <div class="card-footer">
           <small class="text-muted">Look up drink to get ingredients and instructions</small>
