@@ -78,15 +78,15 @@ function ingredientSearch() {
       // for loop to create list of results
       for (let i = 0; i < data.drinks.length; i++) {
         if (data.drinks != "None Found") {
+          searchInput = data.drinks[i]["strDrink"]
           $("#recipe-display").append(`
           <div class="card col-3 border-dark mb-3" style="min-width: 18rem;">
           <img class="card-img-top" src="${data.drinks[i]["strDrinkThumb"]}" alt="Drink Thumbnail">
           <div class="card-body">
           <h5 class="card-title">${data.drinks[i]["strDrink"]}</h5>
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
           <div class="card-footer">
-          <small class="text-muted">Look up drink to get ingredients and instructions</small>
+          <a href="${nameSearch()}" class="btn btn-primary">Get Recipe</a>
           </div>
           </div>
 
