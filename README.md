@@ -1,6 +1,7 @@
 # Kitchen Sink Cocktails
 To obtain information in order to make Cocktails with ingredients that are available to you, and to be able to find the ingredients of your favorite cocktails by name.
 No installations are required. Through HTML, CSS, and JavaScript the site works in harmony to provide a list of a variety of cocktails and ingredients.
+Check it out at https://jakemporter.github.io/Kitchen-Sink-Cocktails/
 
 ## Technical
 - The function handleSearchFormSubmit is used to process data input from the ingredient search and cocktail name search fields. If the value returns data from the API call, the data is displayed in the recipe-display div. If the values do not return a search result, a message will display to prompt the user to try a different search.
