@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitchen Sink Cocktails</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <!-- <img src="./ksc.webp" alt=""> -->
@@ -18,19 +18,18 @@
         <p class="bigger">Create a cocktail from anything you have in your kitchen...</p>
         <p class="bigger">Once you have a drink in mind search by name to get ingredients and instructions</p>
         <label class="bigger" for="ingredient-search">Search by ingredients:</label>
-        <input class="input1" type="search" id="ingredient-input" placeholder="mint,bourbon">
-        <button class="ingredient-search button is-primary" id="ingredient-search">Search</button>
+        <input class="" type="search" id="ingredient-input" placeholder="mint,bourbon">
+        <button class="ingredient-search btn btn-primary" id="ingredient-search">Search</button>
         <!-- search by cocktail name -->
         <label class="bigger" for="cocktail-search">Search by cocktail name:</label>
-        <input class="input1" type="search" id="cocktail-search" placeholder="Vodka Tonic">
-        <button class="name-search button is-primary" id="name-search">Search</button>
+        <input class="" type="search" id="cocktail-search" placeholder="Vodka Tonic">
+        <button class="name-search btn btn-primary" id="name-search">Search</button>
         </div>
         <!-- empty div for search history -->
         <div class="search-history" id="search-history">
         </div>
         <!-- empty div for recipe display -->
-        <div class="recipe-display" id="recipe-display">
-            <ul class="list" id="list"></ul>
+        <div class="recipe-display card-deck" id="recipe-display">
         </div>
         <footer>
             <p class="bigger">Random Quote:</p>
